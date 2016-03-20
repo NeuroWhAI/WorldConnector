@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="WorldConnector">
+      <UniqueIdentifier>{83aae33f-ab69-4f57-8633-ac9f8d74b254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldConnector\Drawing">
+      <UniqueIdentifier>{c9e6a079-acc5-4a16-bf9a-daae5b82fdb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldConnector\Window">
+      <UniqueIdentifier>{78ad0cc0-96ef-4b73-9ad8-674ea1a8be1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldConnector\Audio">
+      <UniqueIdentifier>{35203724-dee6-4fea-8ea0-9a799214ed48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldConnector\Network">
+      <UniqueIdentifier>{307245fa-3342-4b7c-9e0f-6ac8273a2f6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorldConnector\System">
+      <UniqueIdentifier>{b5b3a240-7b01-4c68-9e78-80d676b99b1b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WCMain.h">
+      <Filter>WorldConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="WCUtility.h">
+      <Filter>WorldConnector</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Size.h">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>WorldConnector</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Size.cpp">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>WorldConnector</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Size.inl">
+      <Filter>WorldConnector\Drawing</Filter>
+    </None>
+    <None Include="Point.inl">
+      <Filter>WorldConnector\Drawing</Filter>
+    </None>
+    <None Include="Factory.inl">
+      <Filter>WorldConnector</Filter>
+    </None>
+  </ItemGroup>
+</Project>

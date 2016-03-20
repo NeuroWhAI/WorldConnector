@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="SFMLConnector">
+      <UniqueIdentifier>{df4795e6-3cfa-4e89-b7a0-34ccbb16c8ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SFMLConnector\Drawing">
+      <UniqueIdentifier>{e82a9813-b0ae-4d73-8bb6-e4981fe63c31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SFMLConnector\Audio">
+      <UniqueIdentifier>{41abc003-13fd-42ee-941f-3a82597102ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SFMLConnector\Network">
+      <UniqueIdentifier>{1f8915b6-e1a3-4042-9468-39aa8ee8f960}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SFMLConnector\System">
+      <UniqueIdentifier>{b9e60d3d-e38c-47e1-b252-f86f2cf52a64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SFMLConnector\Window">
+      <UniqueIdentifier>{ab0e0ca0-4ec8-4b5e-9ea2-57e43a988ebe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Size.cpp">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>SFMLConnector</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Size.h">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory.h">
+      <Filter>SFMLConnector</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Size.inl">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </None>
+  </ItemGroup>
+</Project>
