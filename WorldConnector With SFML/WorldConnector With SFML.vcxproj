@@ -157,11 +157,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Size.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Color.h" />
     <ClInclude Include="Factory.h" />
+    <ClInclude Include="Graphics.h" />
     <ClInclude Include="Size.h" />
   </ItemGroup>
   <ItemGroup>

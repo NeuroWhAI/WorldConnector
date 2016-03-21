@@ -24,12 +24,12 @@ public:
 	virtual char getB() const = 0;
 	virtual int getArgb() const = 0;
 
-	virtual void setA(char alpha) = 0;
-	virtual void setR(char red) = 0;
-	virtual void setG(char green) = 0;
-	virtual void setB(char blue) = 0;
+	virtual void setA(int alpha) = 0;
+	virtual void setR(int red) = 0;
+	virtual void setG(int green) = 0;
+	virtual void setB(int blue) = 0;
 	virtual void setArgb(int argb) = 0;
-	virtual void setArgb(char a, char r, char g, char b) = 0;
+	virtual void setArgb(int a, int r, int g, int b) = 0;
 };
 
 

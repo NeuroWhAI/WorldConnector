@@ -1,5 +1,7 @@
 #include "Factory.h"
 
+#include "Graphics.h"
+#include "Color.h"
 #include "Size.h"
 
 
@@ -17,6 +19,18 @@ Factory::~Factory()
 }
 
 //###########################################################################
+
+std::shared_ptr<WorldConnector::Drawing::Graphics> Factory::createGraphics()
+{
+	return std::make_shared<Graphics>();
+}
+
+
+std::shared_ptr<WorldConnector::Drawing::Color> Factory::createColor()
+{
+	return std::make_shared<Color>();
+}
+
 
 std::shared_ptr<WorldConnector::Drawing::Size> Factory::createSize()
 {

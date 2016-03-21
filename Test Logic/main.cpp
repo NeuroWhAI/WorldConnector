@@ -2,8 +2,6 @@
 
 #include "WorldConnector With SFML\Factory.h"
 
-#include <iostream>
-
 
 
 
@@ -19,10 +17,17 @@ void testLogic()
 {
 	// WorldConnector만을 사용해서 로직을 구성
 
+	auto graphics = WorldConnector::Factory::getInstance()->createGraphics();
+
 	auto size1 = WorldConnector::Factory::getInstance()->createSize();
 	size1->setHeight(123);
 
-	std::cout << size1->getHeight() << std::endl;
+	auto color1 = WorldConnector::Factory::getInstance()->createColor();
+	color1->setArgb(255, 255, 0, 255);
+
+	graphics->beginDrawRectangle(3.0f);
+	graphics->drawRectangle(8, 8, 64, 48, *color1);
+	graphics->endDrawRectangle();
 }
 
 
