@@ -6,15 +6,22 @@
 
 #include "WCUtility.h"
 
-#include "Color.h"
-#include "Font.h"
-#include "Point.h"
-#include "Size.h"
-
 
 
 
 BEGIN_WC_DRAWING_NAMESPACE
+
+
+class Color;
+class Font;
+template <typename T>
+class PointT;
+using Point = PointT<int>;
+using PointF = PointT<float>;
+template <typename T>
+class SizeT;
+using Size = SizeT<int>;
+using SizeF = SizeT<float>;
 
 
 class Graphics

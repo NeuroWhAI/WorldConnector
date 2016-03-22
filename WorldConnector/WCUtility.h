@@ -10,5 +10,8 @@
 #define BEGIN_WC_DRAWING_NAMESPACE namespace WorldConnector { namespace Drawing {
 #define END_WC_DRAWING_NAMESPACE } }
 
+#define BEGIN_WC_FORM_NAMESPACE namespace WorldConnector { namespace Form {
+#define END_WC_FORM_NAMESPACE } }
+
 
 #endif

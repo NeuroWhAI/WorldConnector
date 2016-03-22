@@ -136,6 +136,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Event.h" />
     <ClInclude Include="Factory.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Graphics.h" />
@@ -143,14 +144,17 @@
     <ClInclude Include="Size.h" />
     <ClInclude Include="WCMain.h" />
     <ClInclude Include="WCUtility.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Event.cpp" />
     <ClCompile Include="Factory.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Size.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Factory.inl">
