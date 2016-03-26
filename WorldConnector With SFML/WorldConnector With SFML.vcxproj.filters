@@ -28,7 +28,7 @@
     <Filter Include="SFMLConnector\System">
       <UniqueIdentifier>{b9e60d3d-e38c-47e1-b252-f86f2cf52a64}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SFMLConnector\Window">
+    <Filter Include="SFMLConnector\Form">
       <UniqueIdentifier>{ab0e0ca0-4ec8-4b5e-9ea2-57e43a988ebe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -45,6 +45,15 @@
     <ClCompile Include="Color.cpp">
       <Filter>SFMLConnector\Drawing</Filter>
     </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>SFMLConnector\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>SFMLConnector\Form</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Size.h">
@@ -59,9 +68,21 @@
     <ClInclude Include="Color.h">
       <Filter>SFMLConnector\Drawing</Filter>
     </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>SFMLConnector\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>SFMLConnector\Form</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Size.inl">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </None>
+    <None Include="Point.inl">
       <Filter>SFMLConnector\Drawing</Filter>
     </None>
   </ItemGroup>

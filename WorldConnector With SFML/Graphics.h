@@ -4,6 +4,8 @@
 
 #include "WorldConnector\Graphics.h"
 
+#include "SFML\Graphics.hpp"
+
 
 
 
@@ -19,8 +21,16 @@ public:
 
 
 public:
-	Graphics();
+	explicit Graphics(sf::RenderWindow& window);
 	virtual ~Graphics();
+
+
+protected:
+	sf::RenderWindow& m_win;
+
+
+protected:
+	sf::RectangleShape m_rectangle;
 
 
 public:

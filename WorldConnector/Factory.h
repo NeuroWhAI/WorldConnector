@@ -48,8 +48,15 @@ public:
 public:
 	virtual std::shared_ptr<Drawing::Graphics> createGraphics() = 0;
 	virtual std::shared_ptr<Drawing::Color> createColor() = 0;
+	virtual std::shared_ptr<Drawing::Point> createPoint() = 0;
+	virtual std::shared_ptr<Drawing::PointF> createPointF() = 0;
 	virtual std::shared_ptr<Drawing::Size> createSize() = 0;
 	virtual std::shared_ptr<Drawing::SizeF> createSizeF() = 0;
+
+
+public:
+	virtual std::shared_ptr<Form::Window> createWindow() = 0;
+	virtual std::shared_ptr<Form::Event> createEvent() = 0;
 };
 
 

@@ -20,11 +20,11 @@ public:
 public:
 	enum Types
 	{
+		Null,
 		Opened,
 		Closed,
 		Resized,
 		KeyDown,
-		KeyPressed,
 		KeyUp,
 		TouchBegan,
 		TouchMoved,
@@ -51,7 +51,7 @@ protected:
 
 	struct ScrollEvent
 	{
-		float deltaX, deltaY;
+		float delta;
 	};
 
 	

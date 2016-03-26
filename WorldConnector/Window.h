@@ -37,7 +37,8 @@ public:
 
 
 public:
-	virtual void create(const Drawing::Size& size) = 0;
+	virtual void create(const Drawing::Size& size, const std::string title) = 0;
+	virtual void create(const Drawing::Size& size, const std::wstring title) = 0;
 	virtual void exit() = 0;
 
 	virtual bool isRunning() const = 0;

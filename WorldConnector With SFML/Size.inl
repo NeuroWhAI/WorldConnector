@@ -48,3 +48,11 @@ void SizeT<T>::setHeight(const T& height)
 	m_height = height;
 }
 
+
+template <typename T>
+void SizeT<T>::setSize(const T& width, const T& height)
+{
+	m_width = width;
+	m_height = height;
+}
+

@@ -25,6 +25,7 @@ public:
 
 	virtual void setWidth(const T& width) override;
 	virtual void setHeight(const T& height) override;
+	virtual void setSize(const T& width, const T& height) override;
 };
 
 

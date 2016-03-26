@@ -24,6 +24,7 @@ public:
 
 	virtual void setWidth(const T& width) = 0;
 	virtual void setHeight(const T& height) = 0;
+	virtual void setSize(const T& width, const T& height) = 0;
 };
 
 

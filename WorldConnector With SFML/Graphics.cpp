@@ -1,18 +1,14 @@
 #include "Graphics.h"
 
+#include "Color.h"
+#include "Point.h"
+#include "Size.h"
 
 
 
-using Color = Graphics::Color;
-using Font = Graphics::Font;
-using Point = Graphics::Point;
-using PointF = Graphics::PointF;
-using Size = Graphics::Size;
-using SizeF = Graphics::SizeF;
 
-//###########################################################################
-
-Graphics::Graphics()
+Graphics::Graphics(sf::RenderWindow& window)
+	: m_win(window)
 {
 
 }
@@ -64,37 +60,74 @@ void Graphics::Graphics::drawLine(const PointF& point1, const PointF& point2, co
 
 void Graphics::beginDrawRectangle(float thickness)
 {
-
+	m_rectangle.setOutlineThickness(thickness);
+	m_rectangle.setFillColor(sf::Color::Transparent);
 }
 
 
 void Graphics::endDrawRectangle()
 {
-
+	m_rectangle.setOutlineThickness(1.0f);
+	m_rectangle.setFillColor(sf::Color::White);
 }
 
 
 void Graphics::drawRectangle(int x, int y, int width, int height, const Color& color)
 {
+	m_rectangle.setPosition(static_cast<float>(x), static_cast<float>(y));
+	m_rectangle.setSize(sf::Vector2f(static_cast<float>(width),
+		static_cast<float>(height)));
+	m_rectangle.setOutlineColor(sf::Color(
+		color.getR(),
+		color.getG(),
+		color.getB(),
+		color.getA()));
 
+	m_win.draw(m_rectangle);
 }
 
 
 void Graphics::drawRectangle(const Point& location, const Size& size, const Color& color)
 {
+	m_rectangle.setPosition(static_cast<float>(location.getX()),
+		static_cast<float>(location.getY()));
+	m_rectangle.setSize(sf::Vector2f(static_cast<float>(size.getWidth()),
+		static_cast<float>(size.getHeight())));
+	m_rectangle.setOutlineColor(sf::Color(
+		color.getR(),
+		color.getG(),
+		color.getB(),
+		color.getA()));
 
+	m_win.draw(m_rectangle);
 }
 
 
 void Graphics::drawRectangle(float x, float y, float width, float height, const Color& color)
 {
+	m_rectangle.setPosition(x, y);
+	m_rectangle.setSize(sf::Vector2f(width, height));
+	m_rectangle.setOutlineColor(sf::Color(
+		color.getR(),
+		color.getG(),
+		color.getB(),
+		color.getA()));
 
+	m_win.draw(m_rectangle);
 }
 
 
 void Graphics::drawRectangle(const PointF& location, const SizeF& size, const Color& color)
 {
+	m_rectangle.setPosition(location.getX(), location.getY());
+	m_rectangle.setSize(sf::Vector2f(size.getWidth(), size.getHeight()));
+	m_rectangle.setOutlineColor(sf::Color(
+		color.getR(),
+		color.getG(),
+		color.getB(),
+		color.getA()));
 
+	m_win.draw(m_rectangle);
 }
 
 //--------------------------------------------------------------------------
