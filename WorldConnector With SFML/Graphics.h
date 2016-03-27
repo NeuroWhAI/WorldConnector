@@ -2,6 +2,8 @@
 #define __SFML_WC__GRAPHICS_H__
 
 
+#include <unordered_map>
+
 #include "WorldConnector\Graphics.h"
 
 #include "SFML\Graphics.hpp"
@@ -30,7 +32,32 @@ protected:
 
 
 protected:
-	sf::RectangleShape m_rectangle;
+	sf::Transform m_transform;
+	sf::RenderStates m_renderStates;
+
+
+protected:
+	sf::RectangleShape m_drawRect;
+	sf::RectangleShape m_fillRect;
+	std::unordered_map<std::string, sf::Font> m_fontMap;
+	sf::Font m_currentFont;
+	sf::Text m_text;
+
+
+protected:
+	sf::Color convertToSFML(const Color& color);
+	sf::Vector2f convertToSFML(const Point& location);
+	sf::Vector2f convertToSFML(const PointF& location);
+	sf::Vector2f convertToSFML(const Size& size);
+	sf::Vector2f convertToSFML(const SizeF& size);
+
+
+public:
+	virtual void resetTransform() override;
+	virtual void translate(int x, int y) override;
+	virtual void translate(float x, float y) override;
+	virtual void rotate(float degree) override;
+	virtual void scale(float x, float y) override;
 
 
 public:
@@ -38,8 +65,10 @@ public:
 	virtual void endDrawLine() override;
 	virtual void drawLine(int x1, int y1, int x2, int y2, const Color& color) override;
 	virtual void drawLine(const Point& point1, const Point& point2, const Color& color) override;
+	virtual void drawLine(const Point* vertexArray[], std::size_t vertexCount, const Color& color, bool closed = false) override;
 	virtual void drawLine(float x1, float y1, float x2, float y2, const Color& color) override;
 	virtual void drawLine(const PointF& point1, const PointF& point2, const Color& color) override;
+	virtual void drawLine(const PointF* vertexArray[], std::size_t vertexCount, const Color& color, bool closed = false) override;
 
 	virtual void beginDrawRectangle(float thickness) override;
 	virtual void endDrawRectangle() override;

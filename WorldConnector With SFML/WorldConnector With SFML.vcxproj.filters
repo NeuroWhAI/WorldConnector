@@ -54,6 +54,9 @@
     <ClCompile Include="Window.cpp">
       <Filter>SFMLConnector\Form</Filter>
     </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Size.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="Window.h">
       <Filter>SFMLConnector\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>SFMLConnector\Drawing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

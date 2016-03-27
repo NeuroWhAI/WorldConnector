@@ -7,6 +7,12 @@
 
 
 
+WorldConnector::Factory* getFactory()
+{
+	return WorldConnector::Factory::getInstance();
+}
+
+
 void initializeFactory()
 {
 	// 로직에서 커넥터에 연결될 실제 인스턴스를 만드는 팩토리를 초기화
@@ -19,48 +25,58 @@ void testLogic()
 {
 	// WorldConnector만을 사용해서 로직을 구성
 
+	// 사각형1의 각도
+	float angle = 0.0f;
+
 	// 윈도우 크기 생성
-	auto winSize = WorldConnector::Factory::getInstance()->createSize();
+	auto winSize = getFactory()->createSize();
 	winSize->setSize(1024, 768);
 
 	// 윈도우 생성
-	auto window = WorldConnector::Factory::getInstance()->createWindow();
+	auto window = getFactory()->createWindow();
 	window->create(*winSize, "Hello, World!");
 	window->show();
 
 	// 그래픽스 생성
-	auto graphics = WorldConnector::Factory::getInstance()->createGraphics();
+	auto graphics = getFactory()->createGraphics();
 
 	// 사각형1의 위치 생성
-	auto point1 = WorldConnector::Factory::getInstance()->createPoint();
-	point1->setLocation(8, 8);
+	auto point1 = getFactory()->createPoint();
+	point1->setLocation(200, 150);
 
 	// 사각형1의 크기 생성
-	auto size1 = WorldConnector::Factory::getInstance()->createSize();
+	auto size1 = getFactory()->createSize();
 	size1->setSize(64, 48);
 
 	// 사각형2의 위치 생성
-	auto point2 = WorldConnector::Factory::getInstance()->createPoint();
-	point2->setLocation(256, 128);
+	auto point2 = getFactory()->createPoint();
+	point2->setLocation(512, 128);
 
 	// 사각형2의 크기 생성
-	auto size2 = WorldConnector::Factory::getInstance()->createSize();
+	auto size2 = getFactory()->createSize();
 	size2->setSize(256, 512);
 
 	// 윈도우의 배경색 생성
-	auto backColor = WorldConnector::Factory::getInstance()->createColor();
+	auto backColor = getFactory()->createColor();
 	backColor->setArgb(255, 0, 0, 100);
 
 	// 사각형1의 색 생성
-	auto color1 = WorldConnector::Factory::getInstance()->createColor();
+	auto color1 = getFactory()->createColor();
 	color1->setArgb(255, 255, 0, 255);
 
 	// 사각형2의 색 생성
-	auto color2 = WorldConnector::Factory::getInstance()->createColor();
+	auto color2 = getFactory()->createColor();
 	color2->setArgb(255, 0, 255, 100);
 
+	// 글자 폰트 생성
+	auto font = getFactory()->createFont();
+	font->setName("잇걸체.ttf");
+	font->setHeight(64);
+	font->setStyle(WorldConnector::Drawing::FontStyles::Underline);
+	font->addStyle(WorldConnector::Drawing::FontStyles::Bold);
+
 	// 이벤트를 받을 인스턴스 생성
-	auto popEvent = WorldConnector::Factory::getInstance()->createEvent();
+	auto popEvent = getFactory()->createEvent();
 
 	// 윈도우가 열려있는 동안
 	while (window->isRunning())
@@ -80,21 +96,65 @@ void testLogic()
 		}
 
 
+		// 각 변화
+		angle += 0.4f;
+		while (angle >= 360.0f) angle -= 360.0f;
+
+
 		// 배경색 초기화 및 그리기 준비
 		window->clearDrawing(*backColor);
 		window->beginDraw();
+
+
+		// 변환행렬 설정
+		graphics->translate(point1->getX(), point1->getY());
+		graphics->rotate(angle);
 
 		// 사각형 그리기 준비
 		graphics->beginDrawRectangle(5.0f);
 
 		// 사각형1 그리기
-		graphics->drawRectangle(*point1, *size1, *color1);
-
-		// 사각형2 그리기
-		graphics->drawRectangle(*point2, *size2, *color2);
+		graphics->drawRectangle(-size1->getWidth() / 2,
+			-size1->getHeight() / 2,
+			size1->getWidth(), size1->getHeight(),
+			*color1);
 
 		// 사각형 그리기 완료
 		graphics->endDrawRectangle();
+
+		// 글자 그리기 준비
+		graphics->beginDrawString(*font, *color2);
+
+		// 글자 그리기
+		graphics->drawString("Hello", -18, -18);
+
+		// 글자 그리기 완료
+		graphics->endDrawString();
+
+		// 변환 초기화
+		graphics->resetTransform();
+
+
+		// 사각형 그리기 준비
+		graphics->beginFillRectangle();
+
+		// 사각형2 그리기
+		graphics->fillRectangle(*point2, *size2, *color2);
+
+		// 사각형 그리기 완료
+		graphics->endFillRectangle();
+
+
+		// 선 그리기 준비
+		graphics->beginDrawLine(1.0f);
+
+		// 선 그리기
+		graphics->drawLine(16, 512, 32, 700, *color1);
+		graphics->drawLine(32, 700, 480, 720, *color2);
+
+		// 선 그리기 완료
+		graphics->endDrawLine();
+
 
 		// 그리기 완료 및 표시
 		window->endDraw();

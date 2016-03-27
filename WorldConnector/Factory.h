@@ -48,6 +48,7 @@ public:
 public:
 	virtual std::shared_ptr<Drawing::Graphics> createGraphics() = 0;
 	virtual std::shared_ptr<Drawing::Color> createColor() = 0;
+	virtual std::shared_ptr<Drawing::Font> createFont() = 0;
 	virtual std::shared_ptr<Drawing::Point> createPoint() = 0;
 	virtual std::shared_ptr<Drawing::PointF> createPointF() = 0;
 	virtual std::shared_ptr<Drawing::Size> createSize() = 0;

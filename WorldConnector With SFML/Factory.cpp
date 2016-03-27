@@ -4,6 +4,7 @@
 
 #include "Graphics.h"
 #include "Color.h"
+#include "Font.h"
 #include "Point.h"
 #include "Size.h"
 
@@ -36,6 +37,12 @@ std::shared_ptr<WorldConnector::Drawing::Graphics> Factory::createGraphics()
 std::shared_ptr<WorldConnector::Drawing::Color> Factory::createColor()
 {
 	return std::make_shared<Color>();
+}
+
+
+std::shared_ptr<WorldConnector::Drawing::Font> Factory::createFont()
+{
+	return std::make_shared<Font>();
 }
 
 

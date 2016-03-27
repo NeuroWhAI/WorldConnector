@@ -33,12 +33,22 @@ public:
 
 
 public:
+	virtual void resetTransform() = 0;
+	virtual void translate(int x, int y) = 0;
+	virtual void translate(float x, float y) = 0;
+	virtual void rotate(float degree) = 0;
+	virtual void scale(float x, float y) = 0;
+
+
+public:
 	virtual void beginDrawLine(float thickness) = 0;
 	virtual void endDrawLine() = 0;
 	virtual void drawLine(int x1, int y1, int x2, int y2, const Color& color) = 0;
 	virtual void drawLine(const Point& point1, const Point& point2, const Color& color) = 0;
+	virtual void drawLine(const Point* vertexArray[], std::size_t vertexCount, const Color& color, bool closed = false) = 0;
 	virtual void drawLine(float x1, float y1, float x2, float y2, const Color& color) = 0;
 	virtual void drawLine(const PointF& point1, const PointF& point2, const Color& color) = 0;
+	virtual void drawLine(const PointF* vertexArray[], std::size_t vertexCount, const Color& color, bool closed = false) = 0;
 
 	virtual void beginDrawRectangle(float thickness) = 0;
 	virtual void endDrawRectangle() = 0;

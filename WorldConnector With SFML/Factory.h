@@ -27,6 +27,7 @@ protected:
 public:
 	virtual std::shared_ptr<WorldConnector::Drawing::Graphics> createGraphics() override;
 	virtual std::shared_ptr<WorldConnector::Drawing::Color> createColor() override;
+	virtual std::shared_ptr<WorldConnector::Drawing::Font> createFont() override;
 	virtual std::shared_ptr<WorldConnector::Drawing::Point> createPoint() override;
 	virtual std::shared_ptr<WorldConnector::Drawing::PointF> createPointF() override;
 	virtual std::shared_ptr<WorldConnector::Drawing::Size> createSize() override;
