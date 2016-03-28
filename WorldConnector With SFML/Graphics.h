@@ -39,6 +39,8 @@ protected:
 protected:
 	sf::RectangleShape m_drawRect;
 	sf::RectangleShape m_fillRect;
+	sf::CircleShape m_drawCircle;
+	sf::CircleShape m_fillCircle;
 	std::unordered_map<std::string, sf::Font> m_fontMap;
 	sf::Font m_currentFont;
 	sf::Text m_text;
@@ -83,6 +85,20 @@ public:
 	virtual void fillRectangle(const Point& location, const Size& size, const Color& color) override;
 	virtual void fillRectangle(float x, float y, float width, float height, const Color& color) override;
 	virtual void fillRectangle(const PointF& location, const SizeF& size, const Color& color) override;
+
+	virtual void beginDrawEllipse(float thickness) override;
+	virtual void endDrawEllipse() override;
+	virtual void drawEllipse(int x, int y, int width, int height, const Color& color) override;
+	virtual void drawEllipse(const Point& location, const Size& size, const Color& color) override;
+	virtual void drawEllipse(float x, float y, float width, float height, const Color& color) override;
+	virtual void drawEllipse(const PointF& location, const SizeF& size, const Color& color) override;
+
+	virtual void beginFillEllipse() override;
+	virtual void endFillEllipse() override;
+	virtual void fillEllipse(int x, int y, int width, int height, const Color& color) override;
+	virtual void fillEllipse(const Point& location, const Size& size, const Color& color) override;
+	virtual void fillEllipse(float x, float y, float width, float height, const Color& color) override;
+	virtual void fillEllipse(const PointF& location, const SizeF& size, const Color& color) override;
 
 	virtual void beginDrawString(const Font& font, const Color& color) override;
 	virtual void endDrawString() override;

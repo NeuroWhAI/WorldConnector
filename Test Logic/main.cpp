@@ -126,7 +126,7 @@ void testLogic()
 		graphics->beginDrawString(*font, *color2);
 
 		// 글자 그리기
-		graphics->drawString("Hello", -18, -18);
+		graphics->drawString(L"안녕", -18, -18);
 
 		// 글자 그리기 완료
 		graphics->endDrawString();
@@ -143,6 +143,28 @@ void testLogic()
 
 		// 사각형 그리기 완료
 		graphics->endFillRectangle();
+
+
+		// 타원 그리기 준비
+		graphics->beginDrawEllipse(8.0f);
+
+		// 타원 그리기
+		graphics->drawEllipse(point2->getX(), point2->getY(),
+			64, 48, *color2);
+
+		// 타원 그리기 완료
+		graphics->endDrawEllipse();
+
+
+		// 타원 그리기 준비
+		graphics->beginFillEllipse();
+
+		// 타원 그리기
+		graphics->fillEllipse(point2->getX(), point2->getY(),
+			64, 48, *color1);
+
+		// 타원 그리기 완료
+		graphics->endFillEllipse();
 
 
 		// 선 그리기 준비

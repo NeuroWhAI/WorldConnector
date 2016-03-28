@@ -296,6 +296,106 @@ void Graphics::fillRectangle(const PointF& location, const SizeF& size, const Co
 
 //--------------------------------------------------------------------------
 
+void Graphics::beginDrawEllipse(float thickness)
+{
+	m_drawCircle.setOutlineThickness(thickness);
+	m_drawCircle.setFillColor(sf::Color::Transparent);
+}
+
+
+void Graphics::endDrawEllipse()
+{
+	m_drawCircle.setOutlineThickness(1.0f);
+	m_drawCircle.setFillColor(sf::Color::White);
+}
+
+
+void Graphics::drawEllipse(int x, int y, int width, int height, const Color& color)
+{
+	m_drawCircle.setPosition(static_cast<float>(x), static_cast<float>(y));
+	m_drawCircle.setRadius(width / 2.0f);
+	m_drawCircle.setScale(1.0f, static_cast<float>(height) / width);
+	m_drawCircle.setOutlineColor(convertToSFML(color));
+
+	m_win.draw(m_drawCircle, m_renderStates);
+}
+
+
+void Graphics::drawEllipse(const Point& location, const Size& size, const Color& color)
+{
+	drawEllipse(location.getX(), location.getY(),
+		size.getWidth(), size.getHeight(), color);
+}
+
+
+void Graphics::drawEllipse(float x, float y, float width, float height, const Color& color)
+{
+	m_drawCircle.setPosition(x, y);
+	m_drawCircle.setRadius(width / 2.0f);
+	m_drawCircle.setScale(1.0f, height / width);
+	m_drawCircle.setOutlineColor(convertToSFML(color));
+
+	m_win.draw(m_drawCircle, m_renderStates);
+}
+
+
+void Graphics::drawEllipse(const PointF& location, const SizeF& size, const Color& color)
+{
+	drawEllipse(location.getX(), location.getY(),
+		size.getWidth(), size.getHeight(), color);
+}
+
+//--------------------------------------------------------------------------
+
+void Graphics::beginFillEllipse()
+{
+	// empty
+}
+
+
+void Graphics::endFillEllipse()
+{
+	// empty
+}
+
+
+void Graphics::fillEllipse(int x, int y, int width, int height, const Color& color)
+{
+	m_fillCircle.setPosition(static_cast<float>(x), static_cast<float>(y));
+	m_fillCircle.setRadius(width / 2.0f);
+	m_fillCircle.setScale(1.0f, static_cast<float>(height) / width);
+	m_fillCircle.setFillColor(convertToSFML(color));
+
+	m_win.draw(m_fillCircle, m_renderStates);
+}
+
+
+void Graphics::fillEllipse(const Point& location, const Size& size, const Color& color)
+{
+	fillEllipse(location.getX(), location.getY(),
+		size.getWidth(), size.getHeight(), color);
+}
+
+
+void Graphics::fillEllipse(float x, float y, float width, float height, const Color& color)
+{
+	m_fillCircle.setPosition(x, y);
+	m_fillCircle.setRadius(width / 2.0f);
+	m_fillCircle.setScale(1.0f, height / width);
+	m_fillCircle.setFillColor(convertToSFML(color));
+
+	m_win.draw(m_fillCircle, m_renderStates);
+}
+
+
+void Graphics::fillEllipse(const PointF& location, const SizeF& size, const Color& color)
+{
+	fillEllipse(location.getX(), location.getY(),
+		size.getWidth(), size.getHeight(), color);
+}
+
+//--------------------------------------------------------------------------
+
 void Graphics::beginDrawString(const Font& font, const Color& color)
 {
 	auto findFont = m_fontMap.find(font.getName());

@@ -64,6 +64,20 @@ public:
 	virtual void fillRectangle(float x, float y, float width, float height, const Color& color) = 0;
 	virtual void fillRectangle(const PointF& location, const SizeF& size, const Color& color) = 0;
 
+	virtual void beginDrawEllipse(float thickness) = 0;
+	virtual void endDrawEllipse() = 0;
+	virtual void drawEllipse(int x, int y, int width, int height, const Color& color) = 0;
+	virtual void drawEllipse(const Point& location, const Size& size, const Color& color) = 0;
+	virtual void drawEllipse(float x, float y, float width, float height, const Color& color) = 0;
+	virtual void drawEllipse(const PointF& location, const SizeF& size, const Color& color) = 0;
+
+	virtual void beginFillEllipse() = 0;
+	virtual void endFillEllipse() = 0;
+	virtual void fillEllipse(int x, int y, int width, int height, const Color& color) = 0;
+	virtual void fillEllipse(const Point& location, const Size& size, const Color& color) = 0;
+	virtual void fillEllipse(float x, float y, float width, float height, const Color& color) = 0;
+	virtual void fillEllipse(const PointF& location, const SizeF& size, const Color& color) = 0;
+
 	virtual void beginDrawString(const Font& font, const Color& color) = 0;
 	virtual void endDrawString() = 0;
 	virtual void drawString(const std::string& text, int x, int y) = 0;
