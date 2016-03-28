@@ -26,6 +26,10 @@ public:
 	virtual void setX(const T& x) override;
 	virtual void setY(const T& y) override;
 	virtual void setLocation(const T& x, const T& y) override;
+
+	virtual void moveX(const T& deltaX) override;
+	virtual void moveY(const T& deltaY) override;
+	virtual void move(const T& deltaX, const T& deltaY) override;
 };
 
 

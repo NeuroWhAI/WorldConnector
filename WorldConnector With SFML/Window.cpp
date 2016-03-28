@@ -198,7 +198,7 @@ bool Window::pollEvent(Event* pop)
 	}
 
 
-	pop->setType(Event::Types::Null);
+	pop->setType(Event::Types::Unknown);
 	return false;
 }
 

@@ -20,8 +20,8 @@ public:
 public:
 	enum Types
 	{
-		Null,
-		Opened,
+		Unknown = -1,
+		Opened = 0,
 		Closed,
 		Resized,
 		KeyDown,
@@ -30,6 +30,9 @@ public:
 		TouchMoved,
 		TouchEnded,
 		Scrolled,
+
+		//-------------
+		Count
 	};
 
 

@@ -26,6 +26,10 @@ public:
 	virtual void setX(const T& x) = 0;
 	virtual void setY(const T& y) = 0;
 	virtual void setLocation(const T& x, const T& y) = 0;
+
+	virtual void moveX(const T& deltaX) = 0;
+	virtual void moveY(const T& deltaY) = 0;
+	virtual void move(const T& deltaX, const T& deltaY) = 0;
 };
 
 

@@ -57,6 +57,9 @@
     <ClCompile Include="Font.cpp">
       <Filter>SFMLConnector\Drawing</Filter>
     </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>SFMLConnector\Form</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Size.h">
@@ -82,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="Font.h">
       <Filter>SFMLConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>SFMLConnector\Form</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

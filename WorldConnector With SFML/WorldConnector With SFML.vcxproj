@@ -170,6 +170,7 @@
     <ClCompile Include="Factory.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Size.cpp" />
     <ClCompile Include="Window.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="Factory.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Size.h" />
     <ClInclude Include="Window.h" />

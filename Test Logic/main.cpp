@@ -7,7 +7,13 @@
 
 
 
-WorldConnector::Factory* getFactory()
+using WorldConnector::Form::Keyboard;
+using WorldConnector::Drawing::FontStyles;
+using WorldConnector::Form::Event;
+using WorldConnector::Form::Keys;
+
+
+inline WorldConnector::Factory* getFactory()
 {
 	return WorldConnector::Factory::getInstance();
 }
@@ -72,8 +78,8 @@ void testLogic()
 	auto font = getFactory()->createFont();
 	font->setName("잇걸체.ttf");
 	font->setHeight(64);
-	font->setStyle(WorldConnector::Drawing::FontStyles::Underline);
-	font->addStyle(WorldConnector::Drawing::FontStyles::Bold);
+	font->setStyle(FontStyles::Underline);
+	font->addStyle(FontStyles::Bold);
 
 	// 이벤트를 받을 인스턴스 생성
 	auto popEvent = getFactory()->createEvent();
@@ -85,20 +91,56 @@ void testLogic()
 		while (window->pollEvent(popEvent.get()))
 		{
 			// 종료 이벤트라면 윈도우 닫기
-			if (popEvent->getType() == WorldConnector::Form::Event::Closed)
+			if (popEvent->getType() == Event::Closed)
 				window->exit();
 
 			// NOTE: 디버깅용 임시 코드
-			if (popEvent->getType() != WorldConnector::Form::Event::Null)
+			if (popEvent->getType() != Event::Unknown)
 			{
 				std::cout << "이벤트 발생 : " << popEvent->getType() << std::endl;
 			}
 		}
 
 
-		// 각 변화
-		angle += 0.4f;
-		while (angle >= 360.0f) angle -= 360.0f;
+		// 키보드 상태 갱신
+		Keyboard::getInstance()->update();
+
+
+		// 키보드 입력 처리
+		if (Keyboard::getInstance()->isKeyPressed(Keys::Left))
+		{
+			// 각 변화
+			angle -= 0.8f;
+			while (angle < 0.0f) angle += 360.0f;
+		}
+		else if (Keyboard::getInstance()->isKeyPressed(Keys::Right))
+		{
+			// 각 변화
+			angle += 0.8f;
+			while (angle >= 360.0f) angle -= 360.0f;
+		}
+
+		if (Keyboard::getInstance()->isKeyPressed(Keys::W))
+		{
+			// 이동
+			point1->moveY(-1);
+		}
+		else if (Keyboard::getInstance()->isKeyPressed(Keys::S))
+		{
+			// 이동
+			point1->moveY(+1);
+		}
+
+		if (Keyboard::getInstance()->isKeyPressed(Keys::A))
+		{
+			// 이동
+			point1->moveX(-1);
+		}
+		else if (Keyboard::getInstance()->isKeyPressed(Keys::D))
+		{
+			// 이동
+			point1->moveX(+1);
+		}
 
 
 		// 배경색 초기화 및 그리기 준비

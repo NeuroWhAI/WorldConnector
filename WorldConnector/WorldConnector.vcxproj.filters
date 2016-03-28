@@ -63,6 +63,9 @@
     <ClInclude Include="Event.h">
       <Filter>WorldConnector\Form</Filter>
     </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>WorldConnector\Form</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
@@ -87,6 +90,9 @@
       <Filter>WorldConnector\Form</Filter>
     </ClCompile>
     <ClCompile Include="Event.cpp">
+      <Filter>WorldConnector\Form</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
       <Filter>WorldConnector\Form</Filter>
     </ClCompile>
   </ItemGroup>

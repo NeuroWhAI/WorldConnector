@@ -10,6 +10,7 @@
 
 #include "Window.h"
 #include "Event.h"
+#include "Keyboard.h"
 
 
 
@@ -84,5 +85,11 @@ std::shared_ptr<WorldConnector::Form::Window> Factory::createWindow()
 std::shared_ptr<WorldConnector::Form::Event> Factory::createEvent()
 {
 	return std::make_shared<Event>();
+}
+
+
+std::shared_ptr<WorldConnector::Form::Keyboard> Factory::createKeyboard()
+{
+	return std::make_shared<Keyboard>();
 }
 

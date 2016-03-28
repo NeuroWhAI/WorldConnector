@@ -37,6 +37,7 @@ public:
 public:
 	virtual std::shared_ptr<WorldConnector::Form::Window> createWindow() override;
 	virtual std::shared_ptr<WorldConnector::Form::Event> createEvent() override;
+	virtual std::shared_ptr<WorldConnector::Form::Keyboard> createKeyboard() override;
 };
 
 

@@ -9,7 +9,7 @@ using Types = Event::Types;
 
 
 Event::Event()
-	: m_type(Types::Null)
+	: m_type(Types::Unknown)
 {
 
 }

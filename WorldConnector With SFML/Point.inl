@@ -56,3 +56,26 @@ void PointT<T>::setLocation(const T& x, const T& y)
 	m_y = y;
 }
 
+//--------------------------------------------------------------------------
+
+template <typename T>
+void PointT<T>::moveX(const T& deltaX)
+{
+	m_x += deltaX;
+}
+
+
+template <typename T>
+void PointT<T>::moveY(const T& deltaY)
+{
+	m_y += deltaY;
+}
+
+
+template <typename T>
+void PointT<T>::move(const T& deltaX, const T& deltaY)
+{
+	m_x += deltaX;
+	m_y += deltaY;
+}
+
