@@ -98,9 +98,8 @@ enum class Keys
 
 class Keyboard
 {
-protected:
-	Keyboard();
 public:
+	Keyboard();
 	virtual ~Keyboard();
 
 
@@ -131,9 +130,9 @@ public:
 
 
 public:
-	virtual bool isKeyDown(Keys key) = 0;
-	virtual bool isKeyPressed(Keys key) = 0;
-	virtual bool isKeyUp(Keys key) = 0;
+	virtual bool isKeyDown(Keys key) const = 0;
+	virtual bool isKeyPressed(Keys key) const = 0;
+	virtual bool isKeyUp(Keys key) const = 0;
 };
 
 

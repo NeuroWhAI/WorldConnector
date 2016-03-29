@@ -60,6 +60,9 @@
     <ClCompile Include="Keyboard.cpp">
       <Filter>SFMLConnector\Form</Filter>
     </ClCompile>
+    <ClCompile Include="Touch.cpp">
+      <Filter>SFMLConnector\Form</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Size.h">
@@ -87,6 +90,9 @@
       <Filter>SFMLConnector\Drawing</Filter>
     </ClInclude>
     <ClInclude Include="Keyboard.h">
+      <Filter>SFMLConnector\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="Touch.h">
       <Filter>SFMLConnector\Form</Filter>
     </ClInclude>
   </ItemGroup>

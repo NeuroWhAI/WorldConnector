@@ -143,6 +143,7 @@
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Size.h" />
+    <ClInclude Include="Touch.h" />
     <ClInclude Include="WCMain.h" />
     <ClInclude Include="WCUtility.h" />
     <ClInclude Include="Window.h" />
@@ -156,6 +157,7 @@
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Size.cpp" />
+    <ClCompile Include="Touch.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>

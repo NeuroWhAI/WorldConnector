@@ -26,7 +26,7 @@ protected:
 
 
 protected:
-	sf::Keyboard::Key convertToSFML(Keys key);
+	sf::Keyboard::Key convertToSFML(Keys key) const;
 
 
 public:
@@ -34,9 +34,9 @@ public:
 
 
 public:
-	virtual bool isKeyDown(Keys key) override;
-	virtual bool isKeyPressed(Keys key) override;
-	virtual bool isKeyUp(Keys key) override;
+	virtual bool isKeyDown(Keys key) const override;
+	virtual bool isKeyPressed(Keys key) const override;
+	virtual bool isKeyUp(Keys key) const override;
 };
 
 

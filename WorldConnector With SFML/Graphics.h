@@ -47,11 +47,11 @@ protected:
 
 
 protected:
-	sf::Color convertToSFML(const Color& color);
-	sf::Vector2f convertToSFML(const Point& location);
-	sf::Vector2f convertToSFML(const PointF& location);
-	sf::Vector2f convertToSFML(const Size& size);
-	sf::Vector2f convertToSFML(const SizeF& size);
+	sf::Color convertToSFML(const Color& color) const;
+	sf::Vector2f convertToSFML(const Point& location) const;
+	sf::Vector2f convertToSFML(const PointF& location) const;
+	sf::Vector2f convertToSFML(const Size& size) const;
+	sf::Vector2f convertToSFML(const SizeF& size) const;
 
 
 public:

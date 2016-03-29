@@ -20,7 +20,7 @@ Keyboard::~Keyboard()
 
 //###########################################################################
 
-sf::Keyboard::Key Keyboard::convertToSFML(Keys key)
+sf::Keyboard::Key Keyboard::convertToSFML(Keys key) const
 {
 	return static_cast<sf::Keyboard::Key>(key);
 }
@@ -39,7 +39,7 @@ void Keyboard::update()
 
 //###########################################################################
 
-bool Keyboard::isKeyDown(Keys key)
+bool Keyboard::isKeyDown(Keys key) const
 {
 	sf::Keyboard::Key code = convertToSFML(key);
 
@@ -47,7 +47,7 @@ bool Keyboard::isKeyDown(Keys key)
 }
 
 
-bool Keyboard::isKeyPressed(Keys key)
+bool Keyboard::isKeyPressed(Keys key) const
 {
 	sf::Keyboard::Key code = convertToSFML(key);
 
@@ -55,7 +55,7 @@ bool Keyboard::isKeyPressed(Keys key)
 }
 
 
-bool Keyboard::isKeyUp(Keys key)
+bool Keyboard::isKeyUp(Keys key) const
 {
 	sf::Keyboard::Key code = convertToSFML(key);
 

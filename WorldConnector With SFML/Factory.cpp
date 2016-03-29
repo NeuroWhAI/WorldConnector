@@ -11,6 +11,7 @@
 #include "Window.h"
 #include "Event.h"
 #include "Keyboard.h"
+#include "Touch.h"
 
 
 
@@ -91,5 +92,11 @@ std::shared_ptr<WorldConnector::Form::Event> Factory::createEvent()
 std::shared_ptr<WorldConnector::Form::Keyboard> Factory::createKeyboard()
 {
 	return std::make_shared<Keyboard>();
+}
+
+
+std::shared_ptr<WorldConnector::Form::Touch> Factory::createTouch()
+{
+	return std::make_shared<Touch>(m_pWindow);
 }
 

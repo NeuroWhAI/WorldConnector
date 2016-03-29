@@ -25,7 +25,7 @@ Graphics::~Graphics()
 
 //###########################################################################
 
-sf::Color Graphics::convertToSFML(const Color& color)
+sf::Color Graphics::convertToSFML(const Color& color) const
 {
 	return sf::Color(
 		color.getR(),
@@ -35,28 +35,28 @@ sf::Color Graphics::convertToSFML(const Color& color)
 }
 
 
-sf::Vector2f Graphics::convertToSFML(const Point& location)
+sf::Vector2f Graphics::convertToSFML(const Point& location) const
 {
 	return sf::Vector2f(static_cast<float>(location.getX()),
 		static_cast<float>(location.getY()));
 }
 
 
-sf::Vector2f Graphics::convertToSFML(const PointF& location)
+sf::Vector2f Graphics::convertToSFML(const PointF& location) const
 {
 	return sf::Vector2f(location.getX(),
 		location.getY());
 }
 
 
-sf::Vector2f Graphics::convertToSFML(const Size& size)
+sf::Vector2f Graphics::convertToSFML(const Size& size) const
 {
 	return sf::Vector2f(static_cast<float>(size.getWidth()),
 		static_cast<float>(size.getHeight()));
 }
 
 
-sf::Vector2f Graphics::convertToSFML(const SizeF& size)
+sf::Vector2f Graphics::convertToSFML(const SizeF& size) const
 {
 	return sf::Vector2f(size.getWidth(),
 		size.getHeight());

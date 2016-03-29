@@ -18,6 +18,7 @@
 #include "Window.h"
 #include "Event.h"
 #include "Keyboard.h"
+#include "Touch.h"
 
 
 // Audio

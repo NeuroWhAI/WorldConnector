@@ -8,6 +8,7 @@
 
 
 using WorldConnector::Form::Keyboard;
+using WorldConnector::Form::Touch;
 using WorldConnector::Drawing::FontStyles;
 using WorldConnector::Form::Event;
 using WorldConnector::Form::Keys;
@@ -105,7 +106,6 @@ void testLogic()
 		// 키보드 상태 갱신
 		Keyboard::getInstance()->update();
 
-
 		// 키보드 입력 처리
 		if (Keyboard::getInstance()->isKeyPressed(Keys::Left))
 		{
@@ -140,6 +140,21 @@ void testLogic()
 		{
 			// 이동
 			point1->moveX(+1);
+		}
+
+
+		// 마우스 상태 갱신
+		Touch::getInstance()->update();
+
+		// 마우스 입력 처리
+		if (Touch::getInstance()->isDown())
+		{
+			point2 = Touch::getInstance()->getPosition();
+		}
+
+		if (Touch::getInstance()->isLongPressed())
+		{
+			point1 = Touch::getInstance()->getPosition();
 		}
 
 

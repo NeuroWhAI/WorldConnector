@@ -59,6 +59,7 @@ public:
 	virtual std::shared_ptr<Form::Window> createWindow() = 0;
 	virtual std::shared_ptr<Form::Event> createEvent() = 0;
 	virtual std::shared_ptr<Form::Keyboard> createKeyboard() = 0;
+	virtual std::shared_ptr<Form::Touch> createTouch() = 0;
 };
 
 
