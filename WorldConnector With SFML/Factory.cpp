@@ -7,6 +7,7 @@
 #include "Font.h"
 #include "Point.h"
 #include "Size.h"
+#include "Rectangle.h"
 
 #include "Window.h"
 #include "Event.h"
@@ -69,6 +70,18 @@ std::shared_ptr<WorldConnector::Drawing::Size> Factory::createSize()
 std::shared_ptr<WorldConnector::Drawing::SizeF> Factory::createSizeF()
 {
 	return std::make_shared<SizeF>();
+}
+
+
+std::shared_ptr<WorldConnector::Drawing::Rectangle> Factory::createRectangle()
+{
+	return std::make_shared<Rectangle>();
+}
+
+
+std::shared_ptr<WorldConnector::Drawing::RectangleF> Factory::createRectangleF()
+{
+	return std::make_shared<RectangleF>();
 }
 
 //###########################################################################

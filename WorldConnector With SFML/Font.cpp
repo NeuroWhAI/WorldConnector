@@ -47,7 +47,7 @@ void Font::setName(const char name[])
 }
 
 
-void Font::setName(const std::string name)
+void Font::setName(const std::string& name)
 {
 	m_name = name;
 }
@@ -59,7 +59,7 @@ void Font::setName(const wchar_t name[])
 }
 
 
-void Font::setName(const std::wstring name)
+void Font::setName(const std::wstring& name)
 {
 	throw std::exception("지원하지 않는 기능입니다.");
 }

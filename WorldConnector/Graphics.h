@@ -23,6 +23,10 @@ template <typename T>
 class SizeT;
 using Size = SizeT<int>;
 using SizeF = SizeT<float>;
+template <typename T>
+class RectangleT;
+using Rectangle = RectangleT<int>;
+using RectangleF = RectangleT<float>;
 
 
 class Graphics
@@ -54,15 +58,19 @@ public:
 	virtual void endDrawRectangle() = 0;
 	virtual void drawRectangle(int x, int y, int width, int height, const Color& color) = 0;
 	virtual void drawRectangle(const Point& location, const Size& size, const Color& color) = 0;
+	virtual void drawRectangle(const Rectangle& rectangle, const Color& color) = 0;
 	virtual void drawRectangle(float x, float y, float width, float height, const Color& color) = 0;
 	virtual void drawRectangle(const PointF& location, const SizeF& size, const Color& color) = 0;
+	virtual void drawRectangle(const RectangleF& rectangle, const Color& color) = 0;
 
 	virtual void beginFillRectangle() = 0;
 	virtual void endFillRectangle() = 0;
 	virtual void fillRectangle(int x, int y, int width, int height, const Color& color) = 0;
 	virtual void fillRectangle(const Point& location, const Size& size, const Color& color) = 0;
+	virtual void fillRectangle(const Rectangle& rectangle, const Color& color) = 0;
 	virtual void fillRectangle(float x, float y, float width, float height, const Color& color) = 0;
 	virtual void fillRectangle(const PointF& location, const SizeF& size, const Color& color) = 0;
+	virtual void fillRectangle(const RectangleF& rectangle, const Color& color) = 0;
 
 	virtual void beginDrawEllipse(float thickness) = 0;
 	virtual void endDrawEllipse() = 0;

@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "WorldConnector\WCMain.h"
 
 #include "WorldConnector With SFML\Factory.h"
@@ -55,13 +53,9 @@ void testLogic()
 	auto size1 = getFactory()->createSize();
 	size1->setSize(64, 48);
 
-	// 사각형2의 위치 생성
-	auto point2 = getFactory()->createPoint();
-	point2->setLocation(512, 128);
-
-	// 사각형2의 크기 생성
-	auto size2 = getFactory()->createSize();
-	size2->setSize(256, 512);
+	// 사각형2 생성
+	auto rect2 = getFactory()->createRectangle();
+	rect2->setRectangle(512, 128, 256, 512);
 
 	// 윈도우의 배경색 생성
 	auto backColor = getFactory()->createColor();
@@ -94,12 +88,6 @@ void testLogic()
 			// 종료 이벤트라면 윈도우 닫기
 			if (popEvent->getType() == Event::Closed)
 				window->exit();
-
-			// NOTE: 디버깅용 임시 코드
-			if (popEvent->getType() != Event::Unknown)
-			{
-				std::cout << "이벤트 발생 : " << popEvent->getType() << std::endl;
-			}
 		}
 
 
@@ -149,7 +137,8 @@ void testLogic()
 		// 마우스 입력 처리
 		if (Touch::getInstance()->isDown())
 		{
-			point2 = Touch::getInstance()->getPosition();
+			auto cursor = Touch::getInstance()->getPosition();
+			rect2->setLocation(cursor->getX(), cursor->getY());
 		}
 
 		if (Touch::getInstance()->isLongPressed())
@@ -196,7 +185,7 @@ void testLogic()
 		graphics->beginFillRectangle();
 
 		// 사각형2 그리기
-		graphics->fillRectangle(*point2, *size2, *color2);
+		graphics->fillRectangle(*rect2, *color2);
 
 		// 사각형 그리기 완료
 		graphics->endFillRectangle();
@@ -206,21 +195,21 @@ void testLogic()
 		graphics->beginDrawEllipse(8.0f);
 
 		// 타원 그리기
-		graphics->drawEllipse(point2->getX(), point2->getY(),
+		graphics->drawEllipse(rect2->getX(), rect2->getY(),
 			64, 48, *color2);
 
 		// 타원 그리기 완료
 		graphics->endDrawEllipse();
 
 
-		// 타원 그리기 준비
+		// 타원 채우기 준비
 		graphics->beginFillEllipse();
 
-		// 타원 그리기
-		graphics->fillEllipse(point2->getX(), point2->getY(),
+		// 타원 채우기
+		graphics->fillEllipse(rect2->getX(), rect2->getY(),
 			64, 48, *color1);
 
-		// 타원 그리기 완료
+		// 타원 채우기 완료
 		graphics->endFillEllipse();
 
 

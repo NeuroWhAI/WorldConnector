@@ -20,6 +20,8 @@ public:
 	using PointF = WorldConnector::Drawing::PointF;
 	using Size = WorldConnector::Drawing::Size;
 	using SizeF = WorldConnector::Drawing::SizeF;
+	using Rectangle = WorldConnector::Drawing::Rectangle;
+	using RectangleF = WorldConnector::Drawing::RectangleF;
 
 
 public:
@@ -76,15 +78,19 @@ public:
 	virtual void endDrawRectangle() override;
 	virtual void drawRectangle(int x, int y, int width, int height, const Color& color) override;
 	virtual void drawRectangle(const Point& location, const Size& size, const Color& color) override;
+	virtual void drawRectangle(const Rectangle& rectangle, const Color& color) override;
 	virtual void drawRectangle(float x, float y, float width, float height, const Color& color) override;
 	virtual void drawRectangle(const PointF& location, const SizeF& size, const Color& color) override;
+	virtual void drawRectangle(const RectangleF& rectangle, const Color& color) override;
 
 	virtual void beginFillRectangle() override;
 	virtual void endFillRectangle() override;
 	virtual void fillRectangle(int x, int y, int width, int height, const Color& color) override;
 	virtual void fillRectangle(const Point& location, const Size& size, const Color& color) override;
+	virtual void fillRectangle(const Rectangle& rectangle, const Color& color) override;
 	virtual void fillRectangle(float x, float y, float width, float height, const Color& color) override;
 	virtual void fillRectangle(const PointF& location, const SizeF& size, const Color& color) override;
+	virtual void fillRectangle(const RectangleF& rectangle, const Color& color) override;
 
 	virtual void beginDrawEllipse(float thickness) override;
 	virtual void endDrawEllipse() override;

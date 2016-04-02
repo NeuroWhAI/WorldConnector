@@ -53,6 +53,8 @@ public:
 	virtual std::shared_ptr<Drawing::PointF> createPointF() = 0;
 	virtual std::shared_ptr<Drawing::Size> createSize() = 0;
 	virtual std::shared_ptr<Drawing::SizeF> createSizeF() = 0;
+	virtual std::shared_ptr<Drawing::Rectangle> createRectangle() = 0;
+	virtual std::shared_ptr<Drawing::RectangleF> createRectangleF() = 0;
 
 
 public:

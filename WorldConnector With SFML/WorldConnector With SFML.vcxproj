@@ -172,7 +172,9 @@
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Size.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Touch.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -184,12 +186,15 @@
     <ClInclude Include="Graphics.h" />
     <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Size.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="Touch.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Point.inl" />
+    <None Include="Rectangle.inl" />
     <None Include="Size.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

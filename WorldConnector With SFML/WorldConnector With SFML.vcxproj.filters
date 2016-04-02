@@ -63,6 +63,12 @@
     <ClCompile Include="Touch.cpp">
       <Filter>SFMLConnector\Form</Filter>
     </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Size.h">
@@ -95,12 +101,21 @@
     <ClInclude Include="Touch.h">
       <Filter>SFMLConnector\Form</Filter>
     </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Size.inl">
       <Filter>SFMLConnector\Drawing</Filter>
     </None>
     <None Include="Point.inl">
+      <Filter>SFMLConnector\Drawing</Filter>
+    </None>
+    <None Include="Rectangle.inl">
       <Filter>SFMLConnector\Drawing</Filter>
     </None>
   </ItemGroup>

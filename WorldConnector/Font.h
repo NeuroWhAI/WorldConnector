@@ -36,9 +36,9 @@ public:
 	virtual std::wstring getNameW() const = 0;
 
 	virtual void setName(const char name[]) = 0;
-	virtual void setName(const std::string name) = 0;
+	virtual void setName(const std::string& name) = 0;
 	virtual void setName(const wchar_t name[]) = 0;
-	virtual void setName(const std::wstring name) = 0;
+	virtual void setName(const std::wstring& name) = 0;
 
 
 public:

@@ -69,6 +69,12 @@
     <ClInclude Include="Touch.h">
       <Filter>WorldConnector\Form</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Graphics.cpp">
@@ -101,6 +107,12 @@
     <ClCompile Include="Touch.cpp">
       <Filter>WorldConnector\Form</Filter>
     </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>WorldConnector\Drawing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Size.inl">
@@ -111,6 +123,9 @@
     </None>
     <None Include="Factory.inl">
       <Filter>WorldConnector</Filter>
+    </None>
+    <None Include="Rectangle.inl">
+      <Filter>WorldConnector\Drawing</Filter>
     </None>
   </ItemGroup>
 </Project>

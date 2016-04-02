@@ -4,6 +4,7 @@
 #include "Font.h"
 #include "Point.h"
 #include "Size.h"
+#include "Rectangle.h"
 
 
 
@@ -227,6 +228,14 @@ void Graphics::drawRectangle(const Point& location, const Size& size, const Colo
 }
 
 
+void Graphics::drawRectangle(const Rectangle& rectangle, const Color& color)
+{
+	drawRectangle(rectangle.getX(), rectangle.getY(),
+		rectangle.getWidth(), rectangle.getHeight(),
+		color);
+}
+
+
 void Graphics::drawRectangle(float x, float y, float width, float height, const Color& color)
 {
 	m_drawRect.setPosition(x, y);
@@ -241,6 +250,14 @@ void Graphics::drawRectangle(const PointF& location, const SizeF& size, const Co
 {
 	drawRectangle(location.getX(), location.getY(),
 		size.getWidth(), size.getHeight(),
+		color);
+}
+
+
+void Graphics::drawRectangle(const RectangleF& rectangle, const Color& color)
+{
+	drawRectangle(rectangle.getX(), rectangle.getY(),
+		rectangle.getWidth(), rectangle.getHeight(),
 		color);
 }
 
@@ -277,6 +294,14 @@ void Graphics::fillRectangle(const Point& location, const Size& size, const Colo
 }
 
 
+void Graphics::fillRectangle(const Rectangle& rectangle, const Color& color)
+{
+	fillRectangle(rectangle.getX(), rectangle.getY(),
+		rectangle.getWidth(), rectangle.getHeight(),
+		color);
+}
+
+
 void Graphics::fillRectangle(float x, float y, float width, float height, const Color& color)
 {
 	m_fillRect.setPosition(x, y);
@@ -291,6 +316,14 @@ void Graphics::fillRectangle(const PointF& location, const SizeF& size, const Co
 {
 	fillRectangle(location.getX(), location.getY(),
 		size.getWidth(), size.getHeight(),
+		color);
+}
+
+
+void Graphics::fillRectangle(const RectangleF& rectangle, const Color& color)
+{
+	fillRectangle(rectangle.getX(), rectangle.getY(),
+		rectangle.getWidth(), rectangle.getHeight(),
 		color);
 }
 

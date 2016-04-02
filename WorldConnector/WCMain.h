@@ -8,6 +8,8 @@
 #include "Font.h"
 #include "Point.h"
 #include "Size.h"
+#include "Rectangle.h"
+#include "Texture.h"
 
 
 // System

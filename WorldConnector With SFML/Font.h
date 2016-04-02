@@ -33,9 +33,9 @@ public:
 	virtual std::wstring getNameW() const override;
 
 	virtual void setName(const char name[]) override;
-	virtual void setName(const std::string name) override;
+	virtual void setName(const std::string& name) override;
 	virtual void setName(const wchar_t name[]) override;
-	virtual void setName(const std::wstring name) override;
+	virtual void setName(const std::wstring& name) override;
 
 
 public:

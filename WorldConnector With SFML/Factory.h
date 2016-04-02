@@ -32,6 +32,8 @@ public:
 	virtual std::shared_ptr<WorldConnector::Drawing::PointF> createPointF() override;
 	virtual std::shared_ptr<WorldConnector::Drawing::Size> createSize() override;
 	virtual std::shared_ptr<WorldConnector::Drawing::SizeF> createSizeF() override;
+	virtual std::shared_ptr<WorldConnector::Drawing::Rectangle> createRectangle() override;
+	virtual std::shared_ptr<WorldConnector::Drawing::RectangleF> createRectangleF() override;
 
 
 public:
