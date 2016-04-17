@@ -10,7 +10,6 @@
 BEGIN_WC_DRAWING_NAMESPACE
 
 
-
 template <typename T>
 class PointT
 {

@@ -14,7 +14,7 @@ Texture::Texture()
 
 Texture::~Texture()
 {
-
+	
 }
 
 
